@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/ststic/css/bootstrap-datepicker.standalone.min.css">
+    <link rel="stylesheet" href="/static/css/now-ui-kit.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/nucleo-icons.css" type="text/css">
+    <script src="/static/js/navbar-ontop.js"></script>
+    <link rel="icon" href="/static/images/robinhood.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <title>RobinHood | {% block title %}{% endblock title %}</title>
+    <meta name="description" content="RobinHood is a social initiative by E-Cell NIT Raipur">
+    <meta name="keywords" content="RobinHood, E-Cell, NIT Raipur, Raipur, entrepreneurship">
+</head>
+
+<body class="">
+  <nav class="navbar navbar-expand-md navbar-light">
+    <div class="container"> <a class="navbar-brand text-primary" href="#">
+        <i class="fa d-inline fa-lg fa-stop-circle"></i>
+        <b>RobinHood</b>
+      </a> <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar4">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar4">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"> <a class="nav-link" href="/">Home</a> </li>
+          <li class="nav-item"> <a class="nav-link active" href="/learnmore">Learn More</a> </li>
+          <li class="nav-item" style=""> <a class="nav-link" href="/store">Store</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#">Login/Signup</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#">FAQ</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="/donate">Donate Now</a> </li>
+        </ul> <a class="btn navbar-btn ml-md-2 btn-light">Contact us</a>
+      </div>
+    </div>
+  </nav>
+  {% block content %}
+  {% endblock content %}
+  <script src="/static/js/jquery-3.2.1.slim.min.js"></script>
+  <script src="/static/js/popper.min.js"></script>
+  <script src="/static/js/bootstrap.min.js"></script>
+  <script src="/static/js/parallax.js"></script>
+  <script src="/static/js/bootstrap-datepicker.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('[data-toggle="popover"]').popover();
+      $('[data-toggle="tooltip"]').tooltip();
+      $('#datepicker-example').datepicker({
+        calendarWeeks: true,
+        autoclose: true,
+        todayHighlight: true
+      });
+    });
+  </script>
+</body>
+
+</html>

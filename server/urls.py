@@ -15,7 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
+from django.conf.urls import url
+from django.views import static as stat
+from appprofile import views as profileviews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    url(r'^static/(?P<path>.*)$', stat.serve, {'document_root': settings.STATIC_ROOT}),
+    path('learnmore',profileviews.learnmore),
+    path('store',profileviews.store),
+    path('donate',profileviews.donate),
+    path('auth',profileviews.auth),
+    path('',profileviews.homepage),
 ]
+
+admin.site.site_header = "RobinHood Admin Panel"

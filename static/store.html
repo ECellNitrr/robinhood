@@ -1,0 +1,98 @@
+{% extends 'templates/layout.html' %}
+{% block title %}
+  Store
+{% endblock title %}
+{% block content %}
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card text-white bg-info mb-3">
+            <div class="card-header">RAM</div>
+            <div class="card-body">
+              <form>
+                <div class="form-group">
+                  <label for="formControlRange" contenteditable="true">Size</label>
+                  <input type="range" class="form-control-range" id="formControlRange">
+                </div>
+              </form><a class="btn btn-outline-light btn-block" href="#">Apply</a>
+            </div>
+          </div>
+          <div class="card text-white bg-info mb-3">
+            <div class="card-header">Memory</div>
+            <div class="card-body">
+              <form>
+                <div class="form-group">
+                  <label for="formControlRange" contenteditable="true">Size</label>
+                  <input type="range" class="form-control-range" id="formControlRange">
+                </div>
+              </form><a class="btn btn-outline-light btn-block" href="#">Apply</a>
+            </div>
+          </div>
+          <div class="card text-white bg-info mb-3">
+            <div class="card-header">Processor</div>
+            <div class="card-body">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> i5 7500 </div>
+              <br>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                <label class="form-check-label" for="inlineCheckbox2">i3</label>
+              </div>
+              <br>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                <label class="form-check-label" for="inlineCheckbox3">Intel Pentium</label>
+              </div>
+              <br>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                <label class="form-check-label" for="inlineCheckbox3">AMD Rhyzen</label>
+              </div>
+              <a class="btn btn-outline-light btn-block" href="#">Apply</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card"> <img class="card-img-top" src="https://static.pingendo.com/cover-moon.svg" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card"> <img class="card-img-top" src="https://static.pingendo.com/cover-moon.svg" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card"> <img class="card-img-top" src="https://static.pingendo.com/cover-moon.svg" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card"> <img class="card-img-top" src="https://static.pingendo.com/cover-moon.svg" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

@@ -1,0 +1,141 @@
+{% extends 'templates/layout.html' %}
+{% block title %}
+  Login/Signup
+{% endblock title %}
+{% block content %}
+  <div class="bg-dark" style="background-image: url(&quot;/static/images/bg11.jpg&quot;); background-size: cover; background-position: center top;">
+    <div class="container">
+      <div class="row my-4">
+        <div class="mx-auto col-md-6 col-10 col-xl-4 px-4">
+          <div class="card bg-primary">
+            <div class="card-body text-center">
+              <ul class="nav nav-tabs flex-column flex-lg-row bg-primary justify-content-md-center">
+                <li class="nav-item mr-1 text-center">
+                  <a href="" class="active nav-link rounded" data-toggle="pill" data-target="#loginCard">Login</a>
+                </li>
+                <li class="nav-item mr-1 text-center">
+                  <a href="" class="nav-link rounded" data-toggle="pill" data-target="#signupCard">Signup</a>
+                </li>
+              </ul>
+              <div class="card-body">
+                <div class="tab-content mt-2">
+                  <div class="tab-pane fade show active text-center" id="loginCard" role="tabpanel">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <h5 class="mb-4">
+                          <b>LOGIN</b>
+                        </h5>
+                        <!-- <button class="btn btn-icon rounded btn-light mx-1 btn-facebook shadow" type="button">
+                          <i class="fa fa-fw fa-lg fa-facebook-square"></i>
+                        </button>
+                        <button class="btn btn-icon rounded btn-lg btn-light mx-1 btn-twitter shadow" type="button">
+                          <i class="fa fa-fw fa-2x fa-twitter"></i>
+                        </button>
+                        <button class="btn btn-icon rounded btn-light mx-1 btn-google shadow" type="button">
+                          <i class="fa fa-fw fa-google-plus fa-lg"></i>
+                        </button> -->
+                      </div>
+                    </div>
+                    <div class="row mt-4 pt-2">
+                      <div class="col">
+                        <form>
+                          <div class="form-group mb-2">
+                            <div class="input-group border-0">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">
+                                  <i class="now-ui-icons users_circle-08 lg"></i>
+                                </span>
+                              </div>
+                              <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="First Name...">
+                            </div>
+                          </div>
+                          <div class="form-group mb-2">
+                            <div class="input-group border-0">
+                              <div class="input-group-prepend ">
+                                <span class="input-group-text" id="basic-addon1">
+                                  <i class="now-ui-icons text_caps-small lg"></i>
+                                </span>
+                              </div>
+                              <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Last Name...">
+                            </div>
+                          </div>
+                          <div class="form-group mb-3">
+                            <div class="input-group border-0">
+                              <div class="input-group-prepend ">
+                                <span class="input-group-text" id="basic-addon1">
+                                  <i class="now-ui-icons ui-1_email-85 lg"></i>
+                                </span>
+                              </div>
+                              <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Email...">
+                            </div>
+                          </div>
+                          <button type="submit" class="btn mt-4 mb-3 btn-light rounded btn-lg text-primary">Get Started</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade text-center" id="signupCard" role="tabpanel">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <h5 class="mb-4">
+                          <b>SIGN UP</b>
+                        </h5>
+                        <!-- <button class="btn btn-icon rounded btn-light mx-1 btn-facebook shadow" type="button">
+                          <i class="fa fa-fw fa-lg fa-facebook-square"></i>
+                        </button>
+                        <button class="btn btn-icon rounded btn-lg btn-light mx-1 btn-twitter shadow" type="button">
+                          <i class="fa fa-fw fa-2x fa-twitter"></i>
+                        </button>
+                        <button class="btn btn-icon rounded btn-light mx-1 btn-google shadow" type="button">
+                          <i class="fa fa-fw fa-google-plus fa-lg"></i>
+                        </button> -->
+                      </div>
+                    </div>
+                    <div class="row mt-4 pt-2">
+                      <div class="col">
+                        <form>
+                          <div class="form-group mb-2">
+                            <div class="input-group border-0">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">
+                                  <i class="now-ui-icons users_circle-08 lg"></i>
+                                </span>
+                              </div>
+                              <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="First Name...">
+                            </div>
+                          </div>
+                          <div class="form-group mb-2">
+                            <div class="input-group border-0">
+                              <div class="input-group-prepend ">
+                                <span class="input-group-text" id="basic-addon1">
+                                  <i class="now-ui-icons text_caps-small lg"></i>
+                                </span>
+                              </div>
+                              <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Last Name...">
+                            </div>
+                          </div>
+                          <div class="form-group mb-3">
+                            <div class="input-group border-0">
+                              <div class="input-group-prepend ">
+                                <span class="input-group-text" id="basic-addon1">
+                                  <i class="now-ui-icons ui-1_email-85 lg"></i>
+                                </span>
+                              </div>
+                              <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Email...">
+                            </div>
+                          </div>
+                          <button type="submit" class="btn mt-4 mb-3 btn-light rounded btn-lg text-primary">Get Started</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+    </div>
+  </div>
+{% endblock content %}
