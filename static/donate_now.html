@@ -1,0 +1,114 @@
+{% extends 'templates/layout.html' %}
+{% block title %}
+  Donate Now
+{% endblock title %}
+{% block content %}
+<div class="py-5">
+  <div class="container">
+    <div class="row" id="message_row">
+      <div class="col-md-12">
+        <div class="card bg-light mb-3">
+          <div class="card-header">Message</div>
+          <div class="card-body">
+            <h5 class="card-title">Message from the RobinHood</h5>
+            <p class="card-text">{{ message }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card text-white bg-info mb-3">
+          <div class="card-header">Donate Now</div>
+          <div class="card-body">
+            <form action="/donate/do" method="POST">
+              {% csrf_token %}
+              <h5 class="card-title">Select Item</h5>
+              <div class="row">
+                  <div class="col-md-4">
+                      <div class="form-group">
+                          <label for="itemSelectOptions">Select the item</label>
+                          <select class="form-control" id="itemSelectOptions" name="item">
+                              {% for item in items %}
+                                  <option value="{{ item.pk }}">{{item}}</option>
+                              {% endfor %}
+                          </select>
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="form-group">
+                          <label>Enter the quantity</label>
+                          <input type="number" class="form-control" placeholder="Enter quantity" name="quantity">
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                      <label for="conditionSelectOptions">Select item condition</label>
+                      <select class="form-control" id="conditionSelectOptions" name="condition">
+                          <option value="REP">Repairable</option>
+                          <option value="WOR">Working</option>
+                      </select>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-12">
+                          <div class="form-group">
+                              <label for="donationDescription">Description</label>
+                              <textarea class="form-control" id="donationDescription" rows="3" name="description"></textarea>
+                          </div>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-4"></div>
+                  <div class="col-md-4"><button class="btn btn-primary rounded btn-lg btn-block" type="submit" value="Donate Now">Donate Now</button></div>
+                  <div class="col-md-4"></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card text-white bg-info mb-3">
+          <div class="card-header">Donated On</div>
+          <div class="card-body">
+            <h5 class="card-title">Item : Quantity</h5>
+            <p class="card-text" contenteditable="true">Description</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4"></div>
+      <div class="col-md-4"></div>
+    </div>
+  </div>
+</div>
+<div class="py-5 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="mx-auto text-center col-lg-6">
+        <h1 class="mb-3">Get in touch</h1>
+        <p class="lead mb-4">We are so happy to know that you are interested in joining hands</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="p-0 order-2 order-md-1 col-lg-6"> <iframe width="100%" height="350" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.5490831480784!2d81.60284041434998!3d21.249722185879055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28dde213f66723%3A0x21543965c50c43c7!2sNational+Institute+of+Technology%2C+Raipur!5e0!3m2!1sen!2sin!4v1548136174867" scrolling="no" frameborder="0"></iframe> </div>
+      <div class="px-4 order-1 order-md-2 col-lg-6">
+        <h2 class="mb-4">Your details</h2>
+        <div class="form-group"> <input type="text" class="form-control" id="form44" placeholder="Name"> </div>
+        <div class="form-group"> <input type="email" class="form-control" id="form45" placeholder="Email"> </div>
+        <div class="form-group"> <textarea class="form-control" id="form46" rows="3" placeholder="Your message"></textarea> </div> <button type="submit" class="btn btn-primary">Send</button>
+        <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  setTimeout(function() {
+    $('#message_row').hide();
+  }, 5000);
+</script>
+{% endblock content %}

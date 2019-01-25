@@ -28,11 +28,19 @@
         <ul class="navbar-nav ml-auto">
           <li class="nav-item"> <a class="nav-link" href="/">Home</a> </li>
           <li class="nav-item"> <a class="nav-link active" href="/learnmore">Learn More</a> </li>
-          <li class="nav-item" style=""> <a class="nav-link" href="/store">Store</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="#">Login/Signup</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="/store">Store</a> </li>
           <li class="nav-item"> <a class="nav-link" href="#">FAQ</a> </li>
           <li class="nav-item"> <a class="nav-link" href="/donate">Donate Now</a> </li>
-        </ul> <a class="btn navbar-btn ml-md-2 btn-light">Contact us</a>
+          {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link" href="/donate/now">
+                Hello, {{ user.first_name }} {{ user.last_name }}
+              </a>
+            </li>
+          {% else %}
+            <li class="nav-item"> <a class="nav-link" href="/auth">Login/Signup</a> </li>
+          {% endif %}
+        </ul>
       </div>
     </div>
   </nav>

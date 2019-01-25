@@ -19,6 +19,7 @@ from django.conf import settings
 from django.conf.urls import url
 from django.views import static as stat
 from appprofile import views as profileviews
+from donation import views as donationviews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,6 +27,8 @@ urlpatterns = [
     path('learnmore',profileviews.learnmore),
     path('store',profileviews.store),
     path('donate',profileviews.donate),
+    path('donate/now',donationviews.donatenow),
+    path('donate/do',donationviews.donate),
     path('auth',profileviews.auth),
     path('',profileviews.homepage),
 ]

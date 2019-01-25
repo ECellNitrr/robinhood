@@ -38,3 +38,36 @@ class Donation(models.Model):
     modified_at = models.DateTimeField(auto_now=True, editable=False)
     def __str__(self):
         return str(self.profile.user.first_name + " " + self.profile.user.last_name + " => " + self.item.name)
+
+class Address(models.Model):
+    STATE_OPTION = (
+        ('CG', 'Chhattisgarh'),
+        ('OR', 'Orisa'),
+    )
+    COUNTRY_OPTION = (
+        ('IN', 'India'),
+    )
+    class Meta:
+        verbose_name = "Address"
+        verbose_name_plural = "Addresses"
+    profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
+    state = models.CharField(
+        max_length = 3,
+        choices = STATE_OPTION,
+        default = "CG",
+        null=False,
+        blank=False
+    )
+    district = models.TextField(blank=False, null=False)
+    address_line = models.TextField(blank=False, null=False)
+    country = models.CharField(
+        max_length = 3,
+        choices = COUNTRY_OPTION,
+        default = "IN",
+        null=False,
+        blank=False
+    )
+    created_at = models.DateTimeField(auto_now_add=True, editable=False)
+    modified_at = models.DateTimeField(auto_now=True, editable=False)
+    def __str__(self):
+        return str(self.profile.user.first_name + self.profile.user.last_name)

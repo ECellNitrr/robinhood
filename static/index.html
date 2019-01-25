@@ -33,6 +33,13 @@
             <a class="nav-link" href="/store">
               <i class="now-ui-icons files_paper x2 mr-2"></i>STORE</a>
           </li>
+          {% if user.is_authenticated %}
+            <li class="nav-item mx-1 align-items-center d-flex justify-content-center">
+              <a class="nav-link" href="/donate/now">
+                Hello {{ user.username }}
+              </a>
+            </li>
+          {% endif %}
         </ul>
         <a class="btn btn-light text-primary" href="/donate"><i class="now-ui-icons arrows-1_share-66 mr-1">&nbsp;DONATE NOW</i></a>
         <ul class="navbar-nav flex-row justify-content-center mt-2 mt-md-0">
