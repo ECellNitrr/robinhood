@@ -27,6 +27,8 @@ urlpatterns = [
     path('learnmore',profileviews.learnmore),
     path('store',profileviews.store),
     path('donate',profileviews.donate),
+    path('auth/create',profileviews.create_account),
+    path('auth/login',profileviews.account_login),
     path('donate/now',donationviews.donatenow),
     path('donate/do',donationviews.donate),
     path('auth',profileviews.auth),
