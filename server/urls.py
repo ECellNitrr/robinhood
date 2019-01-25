@@ -30,6 +30,7 @@ urlpatterns = [
     path('donate/now',donationviews.donatenow),
     path('donate/do',donationviews.donate),
     path('auth',profileviews.auth),
+    path('auth/logout',profileviews.auth_logout),
     path('',profileviews.homepage),
 ]
 

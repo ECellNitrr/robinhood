@@ -18,7 +18,7 @@
 
 <body class="">
   <nav class="navbar navbar-expand-md navbar-light">
-    <div class="container"> <a class="navbar-brand text-primary" href="#">
+    <div class="container"> <a class="navbar-brand text-primary" href="/">
         <i class="fa d-inline fa-lg fa-stop-circle"></i>
         <b>RobinHood</b>
       </a> <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar4">
@@ -37,6 +37,7 @@
                 Hello, {{ user.first_name }} {{ user.last_name }}
               </a>
             </li>
+            <li class="nav-item"> <a class="nav-link" href="/auth/logout">Logout</a> </li>
           {% else %}
             <li class="nav-item"> <a class="nav-link" href="/auth">Login/Signup</a> </li>
           {% endif %}
